@@ -10,13 +10,31 @@ var mainState = {
 
     preload: function(){
 
+        //Change the background colour
+       game.stage.backgroundColor = '#71c5cf';
+
+        //This loads the image for character
+       game.load.image('bird', 'assets/bird.png');
+
     },
 
     create: function(){
 
+        game.physics.startSystem(phaser.Physics.Arcade);
+
+        this.bird = this.game.add.sprite(100, 245, 'bird');
+
+        game.physics.arcade.enable(this.bird);
+        this.bird.body.gravity.y = 1000;
+
+        var spacekey = this.game.input.keyboard.addKey(phaser.Keyboard.SPACEBAR);
+        spaceKey.onDown.add(this.jump, this);
     },
 
     update: function(){
+
+        if(this.bird.inWorld == false)
+           this.restartGame();
 
     },
 };
