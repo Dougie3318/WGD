@@ -63,7 +63,7 @@ var mainState = {
         pipe.body.velocity.x = -200;
 
         pipe.checkWorldBounds = true;
-        pipe.outofBoundsKill = true;
+        pipe.outOfBoundsKill = true;
     },
 
     addRowOfPipes: function(){
