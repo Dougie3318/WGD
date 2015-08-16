@@ -14,8 +14,8 @@ var mainState = {
        game.stage.backgroundColor = '#71c5cf';
 
         //This loads the image for character
-       game.load.image('bird', 'assets/bird.png');
-       game.load.image('pipe', 'assets/pipe.png');
+       game.load.image('bird', 'Web-Game-Development/assets/bird.png');
+       game.load.image('pipe', 'Web-Game-Development/assets/pipe.png');
 
     },
 
